@@ -1,1 +1,0 @@
-"""Reusable design system starter."""

@@ -1,0 +1,136 @@
+@media (max-width: 991.98px) {
+    body.ui-shell {
+        padding-top: 4.45rem;
+    }
+
+    body.ui-shell.auth-page {
+        padding-top: 0;
+    }
+
+    .app-navbar .container {
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .app-navbar__brand {
+        margin-inline-end: auto;
+        font-size: 1.24rem;
+    }
+
+    .app-navbar .navbar-toggler {
+        align-self: center;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        flex-shrink: 0;
+    }
+
+    .app-navbar .navbar-collapse {
+        width: 100%;
+        margin-top: 0.75rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid rgba(46, 49, 146, 0.08);
+        text-align: right;
+    }
+
+    .app-navbar__nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+    }
+
+    .app-navbar__nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        width: 100%;
+        margin-inline-start: 0;
+        text-align: right;
+    }
+
+    .app-navbar__user {
+        width: 100%;
+        margin-top: 0.75rem;
+        margin-inline-start: 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: right;
+    }
+
+    .app-navbar__user-name {
+        width: 100%;
+        max-width: none;
+    }
+
+    .app-navbar__user-text {
+        max-width: 100%;
+    }
+
+    .app-navbar__logout {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.ui-shell {
+        padding-top: 4.2rem;
+    }
+
+    body.ui-shell.auth-page {
+        padding-top: 0;
+    }
+
+    main.py-4 {
+        padding-top: 1rem !important;
+    }
+
+    main.py-4 > .container {
+        padding-inline: 0.8rem;
+    }
+
+    .card,
+    .confirm-modal__dialog {
+        border-radius: 1.3rem !important;
+    }
+
+    .card-body,
+    .page-card-body {
+        padding: 1rem !important;
+    }
+
+    .btn {
+        padding: 0.58rem 0.9rem;
+    }
+
+    .app-navbar__brand {
+        font-size: 1.06rem;
+    }
+
+    .app-navbar__brand i {
+        font-size: 1.02rem;
+    }
+
+    .page-header h2,
+    .page-header .h3 {
+        font-size: 1.4rem;
+    }
+
+    .page-header p,
+    .page-header--compact p {
+        font-size: 0.88rem;
+        line-height: 1.72;
+    }
+
+    .table-responsive table {
+        font-size: 0.86rem;
+    }
+}
+
+@media (max-width: 479.98px) {
+    main.py-4 > .container {
+        padding-inline: 0.55rem;
+    }
+}

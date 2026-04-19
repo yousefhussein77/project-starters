@@ -1,16 +1,20 @@
-.ui-alert {
+.alert {
     border: 0;
-    border-radius: var(--radius-md);
+    border-radius: 1rem;
     box-shadow: var(--shadow-soft);
-    padding: 0.95rem 1rem;
 }
 
-.ui-alert--success {
+.transaction-inline-alert {
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.alert-success.transaction-inline-alert {
     background: linear-gradient(180deg, #e7f7ef 0%, #d9f2e6 100%);
     color: #176b47;
 }
 
-.ui-alert--danger {
+.alert-danger.transaction-inline-alert {
     background: linear-gradient(180deg, #fdecef 0%, #f9dde3 100%);
     color: #a92c45;
 }

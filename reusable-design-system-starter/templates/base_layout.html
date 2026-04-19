@@ -1,22 +1,34 @@
 <!doctype html>
-<html lang="{{ page_lang | default('en') }}" dir="{{ page_dir | default('ltr') }}">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{{ project_title | default('Starter Project') }}{% endblock %}</title>
-  {% block head %}{% endblock %}
+    <script>
+        document.documentElement.classList.add('app-loading');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Starter Layout{% endblock %}</title>
+
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/tokens/colors.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/tokens/spacing.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/tokens/radius.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/tokens/shadows.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/tokens/typography.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/themes/default.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/themes/zakat-system.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/layout.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/cards.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/buttons.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/forms.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/password-field.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/alerts.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/components/navbar.css') }}">
+    <link data-app-style rel="stylesheet" href="{{ url_for('static', filename='design_system/responsive/mobile.css') }}">
+    {% block extra_head %}{% endblock %}
 </head>
-<body class="ui-shell {{ body_class | default('') }}">
-  {% block navbar %}
-    {% if show_navbar | default(true) %}
-      {% include "design_system/navbar.html" %}
-    {% endif %}
-  {% endblock %}
-
-  <main class="ui-page-wrap ui-section-stack">
+<body class="ui-shell">
     {% block content %}{% endblock %}
-  </main>
 
-  {% block scripts %}{% endblock %}
+    <script type="module" src="{{ url_for('static', filename='design_system/js/design-system-init.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 </html>

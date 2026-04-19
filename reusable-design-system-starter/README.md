@@ -1,110 +1,42 @@
 # Reusable Design System Starter
 
-A reusable design system starter for web projects that need a clean UI foundation, flexible branding, shared components, responsive behavior, and reusable validation helpers.
+Starter reusable frontend package extracted from the current Zakat System UI structure.
 
-This starter is built to be:
+## Purpose
 
-- brandable for different companies and logos
-- adaptable to different forms and field requirements
-- reusable across multiple projects
-- easy to copy into a new codebase
+This package is meant to live in the separate `project-starters` repository as a reusable starter.
+It keeps the runtime naming professional and direct:
 
-## What Is Included
+- `design_system/` for reusable CSS and JS assets
+- `templates/` for starter template examples
 
-- `tokens/` for shared design variables
-- `themes/` for project identity and branding
-- `components/` for reusable UI building blocks
-- `responsive/` for shared mobile behavior
-- `js/` for browser-side helpers
-- `python/validation/` for reusable server-side validation helpers
-- `templates/` for layout starters
-- `examples/` for quick reference integrations
-- `docs/` for reuse guidance
+Inside real applications, the recommended runtime path is still `app/static/design_system/`.
+The repository or collection name can remain `project-starters/`.
 
-## Best Fit
+## Included
 
-Use this starter when you need:
+- `design_system/tokens/`: design tokens
+- `design_system/themes/`: starter themes
+- `design_system/components/`: reusable component styles
+- `design_system/responsive/`: responsive helpers
+- `design_system/js/password-toggle.js`: password toggle helper
+- `design_system/js/validation.js`: generic validation kit
+- `design_system/js/design-system-init.js`: boot/reveal initializer
+- `templates/base_layout.html`: starter layout example
 
-- a reusable UI foundation for internal systems
-- a starter for admin panels or dashboards
-- a base design system for client projects
-- a project that changes brand identity from client to client
+## Suggested Usage
 
-## Not Included
+1. Copy `design_system/` into your app static assets.
+2. Load the CSS files in this order:
+   - `tokens/*`
+   - `themes/default.css`
+   - project theme
+   - `components/*`
+   - `responsive/*`
+3. Load `design_system/js/design-system-init.js` as a module.
+4. Keep app-specific scripts outside the starter package.
 
-This starter does not try to include:
+## Notes
 
-- business-specific pages
-- project-specific routes
-- report-specific templates
-- client-owned assets
-- one-domain assumptions
-
-Those should stay inside the final project that uses this starter.
-
-## Quick Start
-
-1. Copy `reusable-design-system-starter/` into your new project.
-2. Move it into your framework's served static and template folders if needed.
-3. Start from `themes/starter-theme.css`.
-4. Update the brand name, colors, and logo assets.
-5. Connect the CSS and JS from your base template.
-6. Build pages using the shared classes and helpers.
-
-## Included Themes
-
-- `themes/default.css` for a neutral fallback
-- `themes/starter-theme.css` for new projects
-- `themes/example-client.css` as a branded example
-
-## Validation
-
-The starter includes generic validation building blocks for both browser and Python usage.
-
-Generic browser profiles:
-
-- `person-name`
-- `phone`
-- `username`
-- `safe-text`
-- `select-required`
-- `password`
-- `password-confirm`
-- `reason`
-
-Optional locale-specific examples:
-
-- `arabic-full-name`
-- `yemen-mobile`
-
-## Documentation
-
-Read these files before integrating it into a project:
-
-- [README.md](./README.md)
-- [docs/flask-integration.md](./docs/flask-integration.md)
-- [docs/new-project-checklist.md](./docs/new-project-checklist.md)
-- [docs/reuse-map.md](./docs/reuse-map.md)
-- [docs/store-and-reuse.md](./docs/store-and-reuse.md)
-
-## Folder Structure
-
-```text
-reusable-design-system-starter/
-  components/
-  docs/
-  examples/
-  js/
-  python/
-  responsive/
-  templates/
-  themes/
-  tokens/
-  README.md
-```
-
-## Philosophy
-
-Keep the starter generic.
-
-Move only reusable patterns into the starter, and keep client-specific logic, wording, and visuals inside the final project.
+- App-specific files such as `app.js`, `app-validation.js`, and project page CSS are intentionally excluded.
+- This package is focused on reusable frontend structure only.

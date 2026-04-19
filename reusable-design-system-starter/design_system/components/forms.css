@@ -1,0 +1,115 @@
+.ui-field {
+    display: grid;
+    gap: 0.45rem;
+}
+
+button,
+input,
+select,
+textarea,
+.btn,
+.form-control,
+.form-select {
+    font-family: inherit;
+}
+
+.form-control,
+.form-select {
+    min-height: 2.85rem;
+    padding-inline: 0.9rem;
+    border-color: #dfe4ee;
+    border-radius: 14px;
+    box-shadow: none !important;
+    font-size: 0.94rem;
+}
+
+.form-label {
+    margin-bottom: 0.45rem;
+    color: #59657e;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.form-control::placeholder {
+    color: #9aa5bb;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #bfc8dc;
+    box-shadow: 0 0 0 0.25rem rgba(46, 49, 146, 0.08) !important;
+}
+
+.field-error-message {
+    min-height: 1.2rem;
+    margin-top: 0.38rem;
+    color: var(--color-danger);
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.is-invalid-live {
+    border-color: #d84b67 !important;
+    background: linear-gradient(180deg, #fff 0%, #fff6f8 100%);
+    box-shadow: 0 0 0 0.22rem rgba(196, 55, 82, 0.12) !important;
+}
+
+.field-shake {
+    animation: fieldShake 0.28s ease-in-out;
+}
+
+@keyframes fieldShake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.form-check.page-toggle-check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid #e5e9f2;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, var(--color-surface) 0%, #fbfcff 100%);
+}
+
+.form-switch.page-toggle-check .form-check-input {
+    width: 2.4rem;
+    height: 1.2rem;
+    margin: 0;
+    margin-inline-start: 0;
+    float: none;
+    flex-shrink: 0;
+}
+
+.form-check.page-toggle-check .form-check-label {
+    margin: 0;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.reason-field-disabled {
+    opacity: 0.82;
+}
+
+.reason-field-disabled .form-label {
+    color: #98a1b5;
+}
+
+.reason-field-disabled .form-control {
+    border-style: dashed;
+    background: #f4f6fa;
+    color: #9ba5b8;
+}
