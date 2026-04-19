@@ -1,0 +1,16 @@
+.ui-alert {
+    border: 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 0.95rem 1rem;
+}
+
+.ui-alert--success {
+    background: linear-gradient(180deg, #e7f7ef 0%, #d9f2e6 100%);
+    color: #176b47;
+}
+
+.ui-alert--danger {
+    background: linear-gradient(180deg, #fdecef 0%, #f9dde3 100%);
+    color: #a92c45;
+}

@@ -1,0 +1,29 @@
+.ui-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.9rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.18s ease;
+}
+
+.ui-btn--primary {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary), var(--color-primary-light));
+    color: #fff;
+}
+
+.ui-btn--primary:hover,
+.ui-btn--primary:focus {
+    filter: brightness(0.98);
+}
+
+.ui-btn--ghost {
+    background: #fff;
+    color: var(--color-primary);
+    border-color: rgba(46, 49, 146, 0.14);
+}

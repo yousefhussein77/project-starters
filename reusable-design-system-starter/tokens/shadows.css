@@ -1,0 +1,5 @@
+:root {
+    --shadow-soft: 0 12px 28px rgba(30, 42, 80, 0.08);
+    --shadow-deep: 0 18px 40px rgba(24, 34, 74, 0.14);
+    --shadow-focus: 0 0 0 0.24rem rgba(46, 49, 146, 0.1);
+}

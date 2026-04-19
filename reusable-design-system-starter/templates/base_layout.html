@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ page_lang | default('en') }}" dir="{{ page_dir | default('ltr') }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ project_title | default('Starter Project') }}{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+<body class="ui-shell {{ body_class | default('') }}">
+  {% block navbar %}
+    {% if show_navbar | default(true) %}
+      {% include "design_system/navbar.html" %}
+    {% endif %}
+  {% endblock %}
+
+  <main class="ui-page-wrap ui-section-stack">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
