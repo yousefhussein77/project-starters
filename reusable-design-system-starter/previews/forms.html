@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms Preview</title>
+    <link rel="stylesheet" href="../design_system/tokens/colors.css">
+    <link rel="stylesheet" href="../design_system/tokens/spacing.css">
+    <link rel="stylesheet" href="../design_system/tokens/radius.css">
+    <link rel="stylesheet" href="../design_system/tokens/shadows.css">
+    <link rel="stylesheet" href="../design_system/tokens/typography.css">
+    <link rel="stylesheet" href="../design_system/themes/default.css">
+    <link rel="stylesheet" href="../design_system/components/layout.css">
+    <link rel="stylesheet" href="../design_system/components/cards.css">
+    <link rel="stylesheet" href="../design_system/components/buttons.css">
+    <link rel="stylesheet" href="../design_system/components/forms.css">
+    <link rel="stylesheet" href="../design_system/components/password-field.css">
+    <link rel="stylesheet" href="../design_system/components/alerts.css">
+    <link rel="stylesheet" href="../design_system/responsive/mobile.css">
+    <style>
+        body.ui-shell {
+            padding-top: 0;
+        }
+
+        .preview-shell {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .preview-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .preview-form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+
+        .preview-submit {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .ui-input {
+            width: 100%;
+            min-height: 2.85rem;
+            padding-inline: 0.9rem;
+            border: 0;
+            font: inherit;
+            color: inherit;
+            background: transparent;
+        }
+    </style>
+</head>
+<body class="ui-shell">
+    <main class="preview-shell">
+        <div class="preview-bar">
+            <a class="btn btn-outline-secondary" href="./index.html">Preview Home</a>
+            <a class="btn btn-outline-secondary" href="./components.html">Components Preview</a>
+        </div>
+
+        <header class="page-header page-header--compact">
+            <h2>Forms Preview</h2>
+            <p>Sample field states, password input behavior, and shared form styling from the current starter.</p>
+        </header>
+
+        <section class="card">
+            <div class="card-body">
+                <form class="preview-form" novalidate>
+                    <div class="preview-grid">
+                        <label class="ui-field">
+                            <span class="form-label">Full name</span>
+                            <input class="form-control" type="text" placeholder="Jane Doe">
+                        </label>
+
+                        <label class="ui-field">
+                            <span class="form-label">Project type</span>
+                            <select class="form-select">
+                                <option>Internal tool</option>
+                                <option>Admin dashboard</option>
+                                <option>Service portal</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="ui-field">
+                        <span class="form-label">Email address</span>
+                        <input class="form-control is-invalid-live" type="email" value="preview@example">
+                        <span class="field-error-message">Example invalid state for preview purposes.</span>
+                    </label>
+
+                    <label class="ui-field">
+                        <span class="form-label">Password</span>
+                        <span class="password-field-group">
+                            <button class="password-toggle-btn" type="button" data-password-toggle="preview-password" aria-label="Show password" aria-pressed="false">Show</button>
+                            <input id="preview-password" class="form-control" type="password" value="StarterPass123">
+                        </span>
+                    </label>
+
+                    <label class="form-check page-toggle-check form-switch">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <span class="form-check-label">Enable reusable validation patterns</span>
+                    </label>
+
+                    <div class="alert alert-success transaction-inline-alert" role="alert">
+                        Shared form styling should remain reusable. Project-specific workflow rules should stay outside the starter.
+                    </div>
+
+                    <div class="preview-submit">
+                        <button class="btn btn-success" type="submit">Submit</button>
+                        <button class="btn btn-outline-secondary" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../design_system/js/design-system-init.js"></script>
+</body>
+</html>

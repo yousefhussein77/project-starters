@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design System Starter Preview</title>
+    <link rel="stylesheet" href="../design_system/tokens/colors.css">
+    <link rel="stylesheet" href="../design_system/tokens/spacing.css">
+    <link rel="stylesheet" href="../design_system/tokens/radius.css">
+    <link rel="stylesheet" href="../design_system/tokens/shadows.css">
+    <link rel="stylesheet" href="../design_system/tokens/typography.css">
+    <link rel="stylesheet" href="../design_system/themes/default.css">
+    <link rel="stylesheet" href="../design_system/components/layout.css">
+    <link rel="stylesheet" href="../design_system/components/cards.css">
+    <link rel="stylesheet" href="../design_system/components/buttons.css">
+    <link rel="stylesheet" href="../design_system/components/alerts.css">
+    <link rel="stylesheet" href="../design_system/responsive/mobile.css">
+    <style>
+        body.ui-shell {
+            padding-top: 0;
+        }
+
+        .preview-shell {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 2rem 1rem 3rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .preview-card {
+            min-height: 100%;
+        }
+
+        .preview-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .preview-card h3,
+        .preview-card p {
+            margin-top: 0;
+        }
+
+        .preview-note {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="ui-shell">
+    <main class="preview-shell">
+        <header class="page-header">
+            <h2>Reusable Design System Starter</h2>
+            <p>
+                This preview gives a quick visual pass over the current starter without any framework or build setup.
+                Use it to inspect the reusable layer before integrating it into an application.
+            </p>
+        </header>
+
+        <div class="preview-nav">
+            <a class="btn btn-success" href="./components.html">Open Components Preview</a>
+            <a class="btn btn-outline-secondary" href="./forms.html">Open Forms Preview</a>
+        </div>
+
+        <section class="preview-grid">
+            <article class="card preview-card">
+                <div class="card-body">
+                    <h3>What this preview covers</h3>
+                    <p>Core tokens, shared visual language, component styling, and the general feel of the starter assets.</p>
+                </div>
+            </article>
+            <article class="card preview-card">
+                <div class="card-body">
+                    <h3>What it does not cover</h3>
+                    <p>Backend integration, full templates, business workflows, or app-specific screens. Those stay outside the starter.</p>
+                </div>
+            </article>
+            <article class="card preview-card">
+                <div class="card-body">
+                    <h3>Recommended use</h3>
+                    <p>Review these pages, then open the starter README and docs before copying assets into a real project.</p>
+                </div>
+            </article>
+        </section>
+
+        <div class="alert alert-success transaction-inline-alert preview-note" role="alert">
+            The preview pages are intentionally simple and use the existing design-system assets as directly as possible.
+        </div>
+    </main>
+</body>
+</html>

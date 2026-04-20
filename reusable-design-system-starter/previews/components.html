@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components Preview</title>
+    <link rel="stylesheet" href="../design_system/tokens/colors.css">
+    <link rel="stylesheet" href="../design_system/tokens/spacing.css">
+    <link rel="stylesheet" href="../design_system/tokens/radius.css">
+    <link rel="stylesheet" href="../design_system/tokens/shadows.css">
+    <link rel="stylesheet" href="../design_system/tokens/typography.css">
+    <link rel="stylesheet" href="../design_system/themes/default.css">
+    <link rel="stylesheet" href="../design_system/components/layout.css">
+    <link rel="stylesheet" href="../design_system/components/cards.css">
+    <link rel="stylesheet" href="../design_system/components/buttons.css">
+    <link rel="stylesheet" href="../design_system/components/alerts.css">
+    <link rel="stylesheet" href="../design_system/components/navbar.css">
+    <link rel="stylesheet" href="../design_system/responsive/mobile.css">
+    <style>
+        body.ui-shell {
+            padding-top: 0;
+        }
+
+        .preview-shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 1.25rem 1rem 3rem;
+        }
+
+        .preview-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .preview-section {
+            margin-top: 1.5rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .preview-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .preview-nav-shell {
+            padding: 1rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .small-text {
+            color: var(--color-text-muted);
+            font-size: var(--font-size-sm);
+        }
+    </style>
+</head>
+<body class="ui-shell">
+    <main class="preview-shell">
+        <div class="preview-bar">
+            <a class="btn btn-outline-secondary" href="./index.html">Preview Home</a>
+            <a class="btn btn-outline-secondary" href="./forms.html">Forms Preview</a>
+        </div>
+
+        <header class="page-header page-header--compact">
+            <h2>Components Preview</h2>
+            <p>Quick examples of buttons, cards, alerts, and navigation patterns using the current starter assets.</p>
+        </header>
+
+        <section class="preview-section">
+            <h3>Buttons</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="preview-actions">
+                        <button class="btn btn-success" type="button">Primary Action</button>
+                        <button class="btn btn-outline-secondary" type="button">Secondary Action</button>
+                        <button class="btn btn-outline-success" type="button">Outline Success</button>
+                        <button class="btn btn-detail" type="button">Detail Action</button>
+                        <button class="btn action-btn-edit" type="button">Edit Action</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section">
+            <h3>Cards</h3>
+            <div class="preview-grid">
+                <article class="stat-card">
+                    <strong>Reusable tokens</strong>
+                    <p class="small-text">Color, spacing, shadow, and radius primitives feed the shared UI layer.</p>
+                </article>
+                <article class="stat-card">
+                    <strong>Theme overrides</strong>
+                    <p class="small-text">Brand identity can live in theme files without rewriting the component layer.</p>
+                </article>
+                <article class="stat-card">
+                    <strong>Starter principle</strong>
+                    <p class="small-text">Keep reusable assets here and move project-specific styling to the adopting app.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="preview-section">
+            <h3>Alerts</h3>
+            <div class="preview-grid">
+                <div class="alert alert-success transaction-inline-alert" role="alert">
+                    Success styles can support inline confirmations and shared feedback states.
+                </div>
+                <div class="alert alert-danger transaction-inline-alert" role="alert">
+                    Danger styles stay visually distinct while using the same reusable alert pattern.
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section">
+            <h3>Navigation Pattern</h3>
+            <div class="preview-nav-shell navbar bg-success app-navbar">
+                <div class="container">
+                    <a class="navbar-brand app-navbar__brand" href="./index.html">Starter <span>UI</span></a>
+                    <nav class="app-navbar__nav">
+                        <a class="nav-link active" href="./components.html">Components</a>
+                        <a class="nav-link" href="./forms.html">Forms</a>
+                    </nav>
+                    <div class="app-navbar__user">
+                        <span class="app-navbar__user-name">
+                            <span class="app-navbar__user-text">starter-preview@example.com</span>
+                        </span>
+                        <button class="btn app-navbar__logout" type="button">Log out</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

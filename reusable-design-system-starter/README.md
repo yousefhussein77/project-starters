@@ -19,6 +19,7 @@ This starter is for teams that want:
 - `design_system/components/`: reusable UI component styles
 - `design_system/responsive/`: responsive helpers and mobile adjustments
 - `design_system/js/`: small JavaScript helpers for shell boot, password toggle, and validation setup
+- `previews/`: static HTML preview pages for quick visual review of the starter assets
 - `templates/base_layout.html`: example base layout showing how assets are assembled
 - `docs/`: guidance for architecture and customization
 
@@ -45,6 +46,10 @@ reusable-design-system-starter/
     responsive/
     themes/
     tokens/
+  previews/
+    components.html
+    forms.html
+    index.html
   templates/
     base_layout.html
 ```
@@ -57,6 +62,16 @@ reusable-design-system-starter/
 4. Keep app-specific scripts, pages, and business rules outside the reusable starter files.
 5. Rename or replace example theme files only after you understand which values are reusable tokens versus project overrides.
 
+## Preview Pages
+
+Open the static preview pages in `previews/` for a quick visual pass before integrating the starter into a real application.
+
+- `previews/index.html`: starter overview and navigation to the other previews
+- `previews/components.html`: buttons, cards, alerts, and general interface patterns
+- `previews/forms.html`: form controls, validation states, and password-field behavior
+
+These pages are intentionally lightweight. They exist to make the starter easier to inspect, not to replace app-specific implementation.
+
 ## Customization Guide Summary
 
 - Update base primitives in `design_system/tokens/` when the change should affect the whole system.
@@ -65,7 +80,7 @@ reusable-design-system-starter/
 - Adjust `design_system/responsive/mobile.css` for layout behavior that should stay shared.
 - Keep `design_system/js/` focused on generic helpers rather than app workflows.
 
-Detailed guidance lives in [docs/overview.md](/d:/PROJECT%20STARTERS/project-starters-main/reusable-design-system-starter/docs/overview.md) and [docs/customization.md](/d:/PROJECT%20STARTERS/project-starters-main/reusable-design-system-starter/docs/customization.md).
+Detailed guidance lives in [docs/overview.md](./docs/overview.md) and [docs/customization.md](./docs/customization.md).
 
 ## Recommended Next Steps After Adoption
 
