@@ -1,74 +1,77 @@
 # Project Starters
 
-Curated starter templates, reusable UI foundations, and practical boilerplates for internal tools, admin systems, and web apps.
+`project-starters` is a curated starter library for reusable project foundations, UI systems, and practical app starting points.
 
-This repository is meant to collect production-friendly starter kits that can be reused across different client projects, brands, and business domains.
+The goal is simple: keep proven starters in one place, document them clearly, and make them easy to adopt, review, and improve over time.
 
-## Why This Repository Exists
+## Project Philosophy
 
-Building new projects is faster when the repeated foundations are already prepared.
+- Keep each starter self-contained and easy to understand.
+- Prefer practical structure over heavy tooling.
+- Separate reusable foundations from app-specific implementation.
+- Improve starters gradually without breaking the current repository idea.
+- Treat documentation as part of the starter contract, not as an optional extra.
 
-This repository is the shared home for:
+## How To Use a Starter
 
-- reusable design systems
-- admin and internal tool starters
-- form and validation foundations
-- UI templates that can be adapted for different brands
+1. Choose the starter that matches your project type.
+2. Copy the starter folder into your new project or use it as a reference.
+3. Read the starter `README.md` before making changes.
+4. Keep reusable improvements general, and move business-specific logic into your actual app.
+5. If you improve the reusable part, bring that change back into this library.
 
-Each starter is kept in its own folder so it can evolve independently while still living inside one public template library.
-
-## Included Starters
+## Available Starters
 
 ### `reusable-design-system-starter`
 
-A reusable UI foundation for web projects that includes:
+- Name: `reusable-design-system-starter`
+- Type: Frontend design system starter
+- Status: `usable`
+- Description: Reusable CSS, themes, tokens, layout patterns, and lightweight JavaScript helpers for web apps and internal tools.
+- Use it when: You want a structured design-system foundation that can be adopted inside a Flask or server-rendered web app without pulling in a full framework or rewriting UI basics from scratch.
 
-- design tokens
-- themes
-- reusable UI components
-- responsive behavior
-- JavaScript helpers
-- Python validation helpers
-- starter templates and examples
+## Standards for Every Starter
 
-This starter is intentionally generic so it can be adapted to different companies, logos, field sets, and project requirements.
+Every starter in this repository should follow the same baseline contract:
+
+- Use a clear, descriptive folder name.
+- Stay self-contained inside its own directory.
+- Include a focused `README.md` that explains purpose, audience, included parts, and excluded parts.
+- Use a structure that a new developer can understand quickly.
+- Keep reusable assets separate from app-specific code.
+- Avoid unnecessary dependencies, generators, or hidden setup steps.
+- Document any adoption steps, customization points, and known limitations.
+- Reach at least `usable` quality before being presented as ready for normal adoption.
+
+The full reference for new starters lives in [STARTER_SPEC.md](/d:/PROJECT%20STARTERS/project-starters-main/STARTER_SPEC.md).
 
 ## Repository Structure
 
 ```text
 project-starters/
+  README.md
+  CONTRIBUTING.md
+  STARTER_SPEC.md
+  ROADMAP.md
   reusable-design-system-starter/
 ```
 
-As more starters are added, each one should remain self-contained and documented.
+## How to Contribute
 
-## Recommended Use
+Contributions should improve clarity, reuse, and maintainability.
 
-1. Pick the starter that matches the kind of project you want to build.
-2. Copy that starter into your new project.
-3. Rename, theme, and adapt it for the client or business domain.
-4. Keep reusable improvements in this repository, and keep project-specific code inside the project itself.
+- Follow the starter contract in [STARTER_SPEC.md](/d:/PROJECT%20STARTERS/project-starters-main/STARTER_SPEC.md).
+- Use [CONTRIBUTING.md](/d:/PROJECT%20STARTERS/project-starters-main/CONTRIBUTING.md) for contribution flow and pull request expectations.
+- Prefer improving documentation and starter quality before adding more starters.
+- Treat `reusable-design-system-starter` as the first reference example for future starter quality.
 
-## Publishing Notes
+## Current Direction
 
-This repository is designed to be public and easy to browse.
+This repository is evolving from a simple starter collection into a clearer starter library.
 
-Good GitHub repository description:
+That means:
 
-`Public starter kits, reusable design systems, and project templates for web apps and internal tools.`
-
-Suggested topics:
-
-- `starter-kit`
-- `template`
-- `design-system`
-- `boilerplate`
-- `flask`
-- `ui`
-- `frontend`
-- `admin-template`
-
-## Contributing
-
-This repository is maintained as a curated template library.
-External users can view, clone, and reuse it, while direct changes remain controlled by the repository owner.
+- better root-level documentation
+- a shared contract for every starter
+- stronger starter-level docs
+- gradual growth without aggressive restructuring

@@ -1,42 +1,75 @@
 # Reusable Design System Starter
 
-Starter reusable frontend package extracted from the current Zakat System UI structure.
+## What This Starter Is
 
-## Purpose
+`reusable-design-system-starter` is a reusable frontend foundation for server-rendered web apps and internal tools. It packages design tokens, themes, component styles, responsive helpers, and lightweight JavaScript utilities in a structure that can be moved into a real application with minimal friction.
 
-This package is meant to live in the separate `project-starters` repository as a reusable starter.
-It keeps the runtime naming professional and direct:
+## Who It Is For
 
-- `design_system/` for reusable CSS and JS assets
-- `templates/` for starter template examples
+This starter is for teams that want:
 
-Inside real applications, the recommended runtime path is still `app/static/design_system/`.
-The repository or collection name can remain `project-starters/`.
+- a reusable UI baseline without adopting a large frontend framework
+- a cleaner starting point for Flask or template-driven web apps
+- a design-system layer that can be branded and extended per project
 
-## Included
+## What Is Included
 
-- `design_system/tokens/`: design tokens
-- `design_system/themes/`: starter themes
-- `design_system/components/`: reusable component styles
-- `design_system/responsive/`: responsive helpers
-- `design_system/js/password-toggle.js`: password toggle helper
-- `design_system/js/validation.js`: generic validation kit
-- `design_system/js/design-system-init.js`: boot/reveal initializer
-- `templates/base_layout.html`: starter layout example
+- `design_system/tokens/`: base tokens for color, spacing, radius, shadows, and typography
+- `design_system/themes/`: theme-level variable overrides
+- `design_system/components/`: reusable UI component styles
+- `design_system/responsive/`: responsive helpers and mobile adjustments
+- `design_system/js/`: small JavaScript helpers for shell boot, password toggle, and validation setup
+- `templates/base_layout.html`: example base layout showing how assets are assembled
+- `docs/`: guidance for architecture and customization
 
-## Suggested Usage
+## What Is Intentionally Excluded
 
-1. Copy `design_system/` into your app static assets.
-2. Load the CSS files in this order:
-   - `tokens/*`
-   - `themes/default.css`
-   - project theme
-   - `components/*`
-   - `responsive/*`
-3. Load `design_system/js/design-system-init.js` as a module.
-4. Keep app-specific scripts outside the starter package.
+- app-specific routes, views, or backend code
+- page-level business logic
+- project-only branding that should not be shared across adopters
+- build tooling or framework setup beyond what is needed to understand the starter
+- deep component variants for every possible product scenario
 
-## Notes
+## Folder Structure
 
-- App-specific files such as `app.js`, `app-validation.js`, and project page CSS are intentionally excluded.
-- This package is focused on reusable frontend structure only.
+```text
+reusable-design-system-starter/
+  README.md
+  CHANGELOG.md
+  docs/
+    customization.md
+    overview.md
+  design_system/
+    components/
+    js/
+    responsive/
+    themes/
+    tokens/
+  templates/
+    base_layout.html
+```
+
+## How To Integrate It
+
+1. Copy `design_system/` into your application's static assets.
+2. Use `templates/base_layout.html` as a reference for stylesheet and script loading order.
+3. Start with `themes/default.css`, then add or replace a project theme.
+4. Keep app-specific scripts, pages, and business rules outside the reusable starter files.
+5. Rename or replace example theme files only after you understand which values are reusable tokens versus project overrides.
+
+## Customization Guide Summary
+
+- Update base primitives in `design_system/tokens/` when the change should affect the whole system.
+- Update `design_system/themes/` when branding or project-level identity changes.
+- Extend `design_system/components/` carefully so component behavior stays reusable.
+- Adjust `design_system/responsive/mobile.css` for layout behavior that should stay shared.
+- Keep `design_system/js/` focused on generic helpers rather than app workflows.
+
+Detailed guidance lives in [docs/overview.md](/d:/PROJECT%20STARTERS/project-starters-main/reusable-design-system-starter/docs/overview.md) and [docs/customization.md](/d:/PROJECT%20STARTERS/project-starters-main/reusable-design-system-starter/docs/customization.md).
+
+## Recommended Next Steps After Adoption
+
+1. Create a project theme file that overrides brand-facing variables only.
+2. Map your app layouts to the provided component and layout primitives.
+3. Move any project-only CSS and JS into separate app files from day one.
+4. Document local conventions so future reusable improvements can come back into this starter cleanly.
